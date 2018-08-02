@@ -3,7 +3,7 @@
 A native iOS app created using xcode. Sample code for use local notification.
 
 ## Instalation
-Feel free to use It
+Feel free to use It.
 Clone or Download this project.
 
 ## Note
