@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample_Local_Notification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Local Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynt-RB-8IX">
+                                <rect key="frame" x="82" y="220.5" width="211" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2We-i1-3Dp">
+                                <rect key="frame" x="16" y="268" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHO-T5-0Ne">
+                                <rect key="frame" x="16" y="370" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DcF-LH-OKr"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="btnSendTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q90-Vn-7X7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-6H-RQz">
+                                <rect key="frame" x="16" y="319" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ynt-RB-8IX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="30G-ZC-mdG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2We-i1-3Dp" secondAttribute="trailing" constant="16" id="Dnm-Op-Xgg"/>
+                            <constraint firstItem="Ynt-RB-8IX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="NOY-PA-ug5"/>
+                            <constraint firstItem="ahg-6H-RQz" firstAttribute="leading" secondItem="2We-i1-3Dp" secondAttribute="leading" id="O0r-ii-Www"/>
+                            <constraint firstItem="gHO-T5-0Ne" firstAttribute="leading" secondItem="ahg-6H-RQz" secondAttribute="leading" id="ZmR-Hb-loE"/>
+                            <constraint firstItem="gHO-T5-0Ne" firstAttribute="trailing" secondItem="ahg-6H-RQz" secondAttribute="trailing" id="dPs-pQ-lp8"/>
+                            <constraint firstItem="gHO-T5-0Ne" firstAttribute="top" secondItem="ahg-6H-RQz" secondAttribute="bottom" constant="21" id="k4g-bv-3zR"/>
+                            <constraint firstItem="2We-i1-3Dp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kQk-ef-9ba"/>
+                            <constraint firstItem="ahg-6H-RQz" firstAttribute="trailing" secondItem="2We-i1-3Dp" secondAttribute="trailing" id="sn5-5U-51b"/>
+                            <constraint firstItem="2We-i1-3Dp" firstAttribute="top" secondItem="Ynt-RB-8IX" secondAttribute="bottom" constant="21" id="tF2-og-nvG"/>
+                            <constraint firstItem="ahg-6H-RQz" firstAttribute="top" secondItem="2We-i1-3Dp" secondAttribute="bottom" constant="21" id="xoH-k8-gPL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtBody" destination="ahg-6H-RQz" id="b1t-ih-wx5"/>
+                        <outlet property="txtTitle" destination="2We-i1-3Dp" id="SpU-2t-SIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
